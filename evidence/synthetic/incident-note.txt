@@ -1,0 +1,6 @@
+﻿CHRONICLE SIMULATED EVIDENCE
+Case: C-001
+Source: Synthetic test fixture
+Status: Created for educational analysis
+Description: This file is a test artefact for the Chronicle forensic workflow.
+No real user data is contained in this file.
