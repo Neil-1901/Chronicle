@@ -1,0 +1,6 @@
+CHRONICLE SYNTHETIC DEMO EVIDENCE
+Case: CHRONICLE-DEMO-001
+Scenario: Simulated authentication failures followed by a successful login.
+All records are fabricated for controlled academic testing.
+No real user accounts or systems are involved.
+

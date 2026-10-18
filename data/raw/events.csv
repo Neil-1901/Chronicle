@@ -1,0 +1,8 @@
+timestamp,source_type,account_id,action,object_reference,source_reference
+2026-10-18T10:00:00Z,authentication,alex.demo,login_failure,portal,auth-log-001
+2026-10-18T10:00:15Z,authentication,alex.demo,login_failure,portal,auth-log-002
+2026-10-18T10:00:30Z,authentication,alex.demo,login_failure,portal,auth-log-003
+2026-10-18T10:01:00Z,authentication,alex.demo,login_success,portal,auth-log-004
+2026-10-18T10:03:00Z,file_activity,alex.demo,file_opened,case-notes.txt,file-log-001
+2026-10-18T10:04:00Z,file_activity,alex.demo,file_modified,case-notes.txt,file-log-002
+
