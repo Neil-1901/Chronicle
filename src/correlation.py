@@ -93,3 +93,79 @@ def detect_failed_logins_then_success(
         })
 
     return findings
+
+
+
+def detect_login_then_file_activity(
+    events: list[dict[str, Any]],
+    window_minutes: int = 10,
+) -> list[dict[str, Any]]:
+    """Find file activity shortly after a successful login for the same account."""
+    if window_minutes < 1:
+        raise ValueError("window_minutes must be at least 1")
+
+    parsed_events = []
+    for event in events:
+        if not isinstance(event, dict):
+            raise ValueError("Every event must be a dictionary")
+        parsed_events.append((_parse_timestamp(event.get("timestamp")), event))
+
+    parsed_events.sort(key=lambda item: item[0])
+    findings = []
+
+    for login_time, login in parsed_events:
+        if login.get("action") != "login_success":
+            continue
+
+        account_id = login.get("account_id")
+        if not account_id:
+            continue
+
+        login_epoch = login_time.timestamp()
+        matching_activity = [
+            event
+            for event_time, event in parsed_events
+            if event.get("account_id") == account_id
+            and str(event.get("source_type", "")).lower() == "file_activity"
+            and str(event.get("action", "")).lower()
+                in {"file_opened", "file_modified", "file_deleted", "file_created"}
+            and login_epoch < event_time.timestamp()
+            <= login_epoch + window_minutes * 60
+        ]
+
+        if not matching_activity:
+            continue
+
+        supporting_events = [login, *matching_activity]
+        findings.append({
+            "rule_id": "CORR-002",
+            "severity": "low",
+            "title": "File activity after successful login",
+            "account_id": account_id,
+            "supporting_event_ids": [
+                str(event["event_id"])
+                for event in supporting_events
+                if event.get("event_id") is not None
+            ],
+            "source_references": [
+                str(event["source_reference"])
+                for event in supporting_events
+                if event.get("source_reference") is not None
+            ],
+            "window_minutes": window_minutes,
+            "explanation": (
+                f"A successful login was followed by {len(matching_activity)} "
+                f"file-activity event(s) for the same account within "
+                f"{window_minutes} minutes. This temporal association is an "
+                "investigative lead; it does not establish who performed the "
+                "actions, whether the activity was authorised, or whether "
+                "the login caused the file activity."
+            ),
+            "limitation": (
+                "The rule relies on account identifiers and timestamps in "
+                "the supplied records. Shared accounts, inaccurate clocks, "
+                "or incomplete logs may produce misleading associations."
+            ),
+        })
+
+    return findings

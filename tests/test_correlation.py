@@ -1,6 +1,9 @@
 import unittest
 
-from src.correlation import detect_failed_logins_then_success
+from src.correlation import (
+    detect_failed_logins_then_success,
+    detect_login_then_file_activity,
+)
 
 
 class TestCorrelation(unittest.TestCase):
@@ -79,6 +82,95 @@ class TestCorrelation(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "threshold"):
             detect_failed_logins_then_success(self.events, threshold=0)
 
+
+
+    def test_detects_login_followed_by_file_activity(self):
+        events = [
+            {
+                "event_id": "E0004",
+                "timestamp": "2026-10-18T10:04:00Z",
+                "account_id": "user-1",
+                "action": "login_success",
+                "source_type": "authentication",
+                "source_reference": "auth.log:4",
+            },
+            {
+                "event_id": "E0005",
+                "timestamp": "2026-10-18T10:06:00Z",
+                "account_id": "user-1",
+                "action": "file_opened",
+                "source_type": "file_activity",
+                "source_reference": "files.log:5",
+            },
+        ]
+
+        findings = detect_login_then_file_activity(events)
+
+        self.assertEqual(len(findings), 1)
+        self.assertEqual(findings[0]["rule_id"], "CORR-002")
+        self.assertEqual(
+            findings[0]["supporting_event_ids"],
+            ["E0004", "E0005"],
+        )
+        self.assertEqual(
+            findings[0]["source_references"],
+            ["auth.log:4", "files.log:5"],
+        )
+        self.assertIn("limitation", findings[0])
+
+    def test_ignores_file_activity_for_different_account(self):
+        events = [
+            {
+                "event_id": "E0004",
+                "timestamp": "2026-10-18T10:04:00Z",
+                "account_id": "user-1",
+                "action": "login_success",
+            },
+            {
+                "event_id": "E0005",
+                "timestamp": "2026-10-18T10:06:00Z",
+                "account_id": "user-2",
+                "action": "file_opened",
+                "source_type": "file_activity",
+            },
+        ]
+
+        self.assertEqual(detect_login_then_file_activity(events), [])
+
+    def test_ignores_file_activity_outside_window(self):
+        events = [
+            {
+                "event_id": "E0004",
+                "timestamp": "2026-10-18T10:04:00Z",
+                "account_id": "user-1",
+                "action": "login_success",
+            },
+            {
+                "event_id": "E0005",
+                "timestamp": "2026-10-18T10:20:00Z",
+                "account_id": "user-1",
+                "action": "file_opened",
+                "source_type": "file_activity",
+            },
+        ]
+
+        self.assertEqual(
+            detect_login_then_file_activity(events, window_minutes=10),
+            [],
+        )
+
+    def test_rejects_invalid_file_activity_window(self):
+        events = [
+            {
+                "event_id": "E0004",
+                "timestamp": "2026-10-18T10:04:00Z",
+                "account_id": "user-1",
+                "action": "login_success",
+            }
+        ]
+
+        with self.assertRaises(ValueError):
+            detect_login_then_file_activity(events, window_minutes=0)
 
 if __name__ == "__main__":
     unittest.main()

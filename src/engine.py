@@ -2,7 +2,10 @@ import json
 from pathlib import Path
 from typing import Any
 
-from src.correlation import detect_failed_logins_then_success
+from src.correlation import (
+    detect_failed_logins_then_success,
+    detect_login_then_file_activity,
+)
 from src.manifest import create_manifest
 from src.parsers import parse_events
 from src.report import generate_report
@@ -40,7 +43,10 @@ def run_investigation(
 
     events = parse_events(events_path)
     timeline = build_timeline(events)
-    findings = detect_failed_logins_then_success(timeline)
+    findings = (
+        detect_failed_logins_then_success(timeline)
+        + detect_login_then_file_activity(timeline)
+    )
 
     report = generate_report(
         case_id=case_id,
