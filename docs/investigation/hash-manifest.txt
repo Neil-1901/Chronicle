@@ -1,0 +1,6 @@
+﻿Case: C-001
+Evidence file: evidence/synthetic/incident-note.txt
+Evidence type: Synthetic text fixture
+Hash algorithm: SHA-256
+SHA-256: A98DF737E6D5A42D8E26F26D848E7A1668C05A61C9F1092CE3270706B63FAF16
+Purpose: Initial integrity reference before further analysis
