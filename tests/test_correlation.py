@@ -2,11 +2,35 @@ import unittest
 
 from src.correlation import (
     detect_failed_logins_then_success,
+    detect_dns_query_response,
     detect_login_then_file_activity,
+    detect_staging_then_transfer,
 )
 
 
 class TestCorrelation(unittest.TestCase):
+    def test_dns_rule_requires_matching_transaction_and_reversed_endpoints(self):
+        events = [
+            {"event_id": "PCAP-E0013", "source_id": "HTTP-CAP-01", "timestamp": "2004-05-13T10:17:09Z", "source_type": "network", "action": "dns_query", "source_reference": "http.cap#frame=13", "attributes": {"dns_transaction_id": "35", "source_ip": "145.254.160.237", "source_port": 3009, "destination_ip": "145.253.2.203", "destination_port": 53}},
+            {"event_id": "PCAP-E0017", "source_id": "HTTP-CAP-01", "timestamp": "2004-05-13T10:17:10Z", "source_type": "network", "action": "dns_response", "source_reference": "http.cap#frame=17", "attributes": {"dns_transaction_id": "35", "paired_query_event_id": "PCAP-E0013", "source_ip": "145.253.2.203", "source_port": 53, "destination_ip": "145.254.160.237", "destination_port": 3009}},
+        ]
+        finding = detect_dns_query_response(events)[0]
+        self.assertEqual(finding["rule_id"], "CORR-004")
+        self.assertEqual(finding["supporting_event_ids"], ["PCAP-E0013", "PCAP-E0017"])
+        self.assertEqual(finding["source_references"], ["http.cap#frame=13", "http.cap#frame=17"])
+        altered = [{**events[1], "attributes": {**events[1]["attributes"], "dns_transaction_id": "36"}}]
+        self.assertEqual(detect_dns_query_response([events[0], *altered]), [])
+
+    def test_archive_then_upload_links_exact_records_and_states_limit(self):
+        events = [
+            {"event_id": "GH-E1", "source_id": "ENDPOINT-01", "timestamp": "2026-10-18T10:00:00Z", "account_id": "svc", "source_type": "file_activity", "action": "archive_created", "source_reference": "endpoint:1", "attributes": {"host": "WS-1"}},
+            {"event_id": "GH-E2", "source_id": "NETWORK-01", "timestamp": "2026-10-18T10:10:00Z", "account_id": "svc", "source_type": "network", "action": "network_upload", "source_reference": "proxy:2", "attributes": {"host": "WS-1"}},
+        ]
+        finding = detect_staging_then_transfer(events)[0]
+        self.assertEqual(finding["supporting_event_ids"], ["GH-E1", "GH-E2"])
+        self.assertEqual(finding["supporting_records"][1]["source_reference"], "proxy:2")
+        self.assertTrue(finding["alternative_explanations"])
+
     def setUp(self):
         self.events = [
             {

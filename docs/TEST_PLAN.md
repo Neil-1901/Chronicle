@@ -1,20 +1,12 @@
-# Chronicle — Test Plan
+# Validation plan and verified scope
 
-All tests below are planned, not yet executed.
+The current automated suite covers parser inputs and timestamps, duplicate stable IDs, timeline ordering, four correlation rules, hash calculation, manifests, report serialization, the original six-event fixture, Glasshouse event count/IDs, capture/export provenance validation, report-to-source traceability, and API case selection/error response. Run `.venv/bin/python evaluation/run_evaluation.py` for the current test result.
 
-| ID | Test | Expected result |
-|---|---|---|
-| TC-01 | Hash an unchanged file twice | Hashes match |
-| TC-02 | Modify a file after hashing | New hash differs |
-| TC-03 | Load valid CSV/JSON | Records parse correctly |
-| TC-04 | Invalid timestamp | Clear error handling |
-| TC-05 | Unsorted events | Timeline is chronological |
-| TC-06 | Different time zones | Documented normalisation |
-| TC-07 | Different accounts | Not merged solely due to nearby timestamps |
-| TC-08 | Matching correlation rule | Finding cites source event IDs |
-| TC-09 | No rule match | No unsupported finding |
-| TC-10 | Generate report | Findings and source references appear |
-| TC-11 | Missing input file | Actionable error |
-| TC-12 | Empty dataset | Clear empty result or message |
+Run:
 
-Record inputs, steps, expected result, actual result and status. Do not mark tests PASS until executed.
+```bash
+.venv/bin/python evaluation/run_evaluation.py
+cd frontend && npm run build
+```
+
+The test report states actual totals. These checks do not establish real-world forensic accuracy, validate the truth of synthetic scenario labels, or test native PCAP parsing. This pass also exercised all three cases in the browser, including finding-to-frame navigation, the evidence ledger, report, and separate synthetic case runs.

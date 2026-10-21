@@ -1,0 +1,241 @@
+event_id,source_id,timestamp,source_type,account_id,host,action,object_reference,source_reference,bytes,destination,disposition
+GH-E0001,ENDPOINT-02,2026-10-17T07:11:18Z,file_activity,build-agent,WS-FIN-08,file_created,C:/Users/shared/readme.txt,endpoint.jsonl:bg-076,,,
+GH-E0002,AUTH-01,2026-10-17T07:18:20Z,authentication,analyst.kpatel,WS-FIN-07,login_success,sso,auth.log:bg-065,,,
+GH-E0003,ENDPOINT-02,2026-10-17T07:18:50Z,file_activity,jlee,WS-OPS-03,file_opened,D:/Backup/index.db,endpoint.jsonl:bg-028,,,
+GH-E0004,AUTH-01,2026-10-17T07:24:26Z,authentication,mrivera,WS-FIN-07,login_success,finance-app,auth.log:bg-071,,,
+GH-E0005,NETWORK-02,2026-10-17T07:30:06Z,network,mrivera,SRV-FS-02,network_connection,telemetry,proxy.csv:bg-064,32768,10.20.0.12:445,approved service
+GH-E0006,AUTH-01,2026-10-17T07:32:28Z,authentication,svc-backup,WS-FIN-08,login_success,sso,auth.log:bg-032,,,
+GH-E0007,ENDPOINT-02,2026-10-17T07:37:31Z,file_activity,analyst.kpatel,WS-OPS-03,file_opened,C:/Projects/build.log,endpoint.jsonl:bg-016,,,
+GH-E0008,NETWORK-01,2026-10-17T07:38:45Z,network,analyst.kpatel,WS-FIN-07,network_connection,api.internal,proxy.csv:bg-011,512,192.0.2.10:443,approved service
+GH-E0009,NETWORK-01,2026-10-17T07:39:28Z,network,jlee,WS-FIN-07,network_upload,archive.zip,proxy.csv:bg-069,1048576,203.0.113.18:443,routine
+GH-E0010,AUTH-01,2026-10-17T07:39:36Z,authentication,build-agent,SRV-FS-02,login_success,finance-app,auth.log:bg-041,,,
+GH-E0011,NETWORK-02,2026-10-17T07:40:32Z,network,analyst.kpatel,SRV-FS-02,dns_query,updates.vendor.test,proxy.csv:bg-018,512,198.51.100.24:443,routine
+GH-E0012,AUTH-01,2026-10-17T07:43:36Z,authentication,analyst.kpatel,SRV-FS-02,login_failure,vpn,auth.log:bg-020,,,
+GH-E0013,NETWORK-01,2026-10-17T07:47:36Z,network,build-agent,WS-OPS-03,network_connection,archive.zip,proxy.csv:bg-005,2048,10.20.0.12:445,unknown
+GH-E0014,AUTH-01,2026-10-17T07:48:00Z,authentication,build-agent,WS-OPS-03,login_success,sso,auth.log:bg-007,,,
+GH-E0015,AUTH-01,2026-10-17T07:48:52Z,authentication,svc-backup,WS-OPS-03,login_success,vpn,auth.log:bg-068,,,
+GH-E0016,ENDPOINT-01,2026-10-17T07:52:38Z,file_activity,mrivera,WS-FIN-08,file_deleted,D:/Backup/index.db,endpoint.jsonl:bg-065,,,
+GH-E0017,ENDPOINT-02,2026-10-17T07:53:37Z,file_activity,mrivera,WS-FIN-08,file_created,D:/Backup/index.db,endpoint.jsonl:bg-060,,,
+GH-E0018,ENDPOINT-01,2026-10-17T07:58:25Z,file_activity,analyst.kpatel,BUILD-01,file_opened,C:/Users/shared/readme.txt,endpoint.jsonl:bg-061,,,
+GH-E0019,AUTH-01,2026-10-17T08:00:11Z,authentication,build-agent,WS-OPS-03,login_failure,finance-app,auth.log:bg-050,,,
+GH-E0020,AUTH-01,2026-10-17T08:00:14Z,authentication,analyst.kpatel,SRV-FS-02,login_success,sso,auth.log:bg-008,,,
+GH-E0021,ENDPOINT-02,2026-10-17T08:00:35Z,file_activity,mrivera,WS-FIN-08,file_deleted,C:/Projects/build.log,endpoint.jsonl:bg-036,,,
+GH-E0022,NETWORK-01,2026-10-17T08:00:58Z,network,svc-backup,WS-OPS-03,dns_query,api.internal,proxy.csv:bg-049,2048,10.20.0.12:445,approved service
+GH-E0023,AUTH-01,2026-10-17T08:05:49Z,authentication,analyst.kpatel,WS-FIN-07,login_success,finance-app,auth.log:bg-036,,,
+GH-E0024,NETWORK-02,2026-10-17T08:08:24Z,network,jlee,BUILD-01,dns_query,telemetry,proxy.csv:bg-008,32768,192.0.2.10:443,approved service
+GH-E0025,ENDPOINT-02,2026-10-17T08:08:45Z,file_activity,jlee,WS-OPS-03,file_opened,C:/Users/shared/readme.txt,endpoint.jsonl:bg-038,,,
+GH-E0026,NETWORK-02,2026-10-17T08:10:11Z,network,build-agent,BUILD-01,network_upload,archive.zip,proxy.csv:bg-052,32768,203.0.113.18:443,unknown
+GH-E0027,ENDPOINT-01,2026-10-17T08:15:06Z,file_activity,analyst.kpatel,WS-OPS-03,file_created,C:/Users/shared/readme.txt,endpoint.jsonl:bg-023,,,
+GH-E0028,AUTH-01,2026-10-17T08:15:29Z,authentication,mrivera,BUILD-01,login_success,sso,auth.log:bg-029,,,
+GH-E0029,AUTH-01,2026-10-17T08:18:17Z,authentication,mrivera,WS-FIN-07,login_success,vpn,auth.log:bg-062,,,
+GH-E0030,AUTH-01,2026-10-17T08:18:25Z,authentication,mrivera,WS-OPS-03,login_success,sso,auth.log:bg-038,,,
+GH-E0031,NETWORK-02,2026-10-17T08:18:30Z,network,build-agent,WS-OPS-03,network_upload,archive.zip,proxy.csv:bg-034,32768,192.0.2.10:443,unknown
+GH-E0032,NETWORK-02,2026-10-17T08:24:13Z,network,svc-backup,BUILD-01,network_upload,api.internal,proxy.csv:bg-030,512,192.0.2.10:443,routine
+GH-E0033,NETWORK-01,2026-10-17T08:27:18Z,network,jlee,WS-OPS-03,network_upload,updates.vendor.test,proxy.csv:bg-061,1048576,10.20.0.12:445,unknown
+GH-E0034,AUTH-01,2026-10-17T08:27:36Z,authentication,svc-backup,WS-FIN-07,mfa_challenge,finance-app,auth.log:bg-073,,,
+GH-E0035,ENDPOINT-02,2026-10-17T08:29:18Z,file_activity,jlee,SRV-FS-02,file_opened,D:/Backup/index.db,endpoint.jsonl:bg-034,,,
+GH-E0036,ENDPOINT-02,2026-10-17T08:32:19Z,file_activity,svc-backup,SRV-FS-02,file_opened,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-052,,,
+GH-E0037,NETWORK-02,2026-10-17T08:34:59Z,network,build-agent,WS-FIN-08,network_upload,archive.zip,proxy.csv:bg-032,2048,10.20.0.12:445,routine
+GH-E0038,ENDPOINT-02,2026-10-17T08:35:46Z,file_activity,analyst.kpatel,BUILD-01,file_modified,D:/Backup/index.db,endpoint.jsonl:bg-066,,,
+GH-E0039,ENDPOINT-02,2026-10-17T08:36:38Z,file_activity,jlee,WS-FIN-08,file_deleted,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-044,,,
+GH-E0040,AUTH-01,2026-10-17T08:43:44Z,authentication,build-agent,WS-OPS-03,login_success,sso,auth.log:bg-047,,,
+GH-E0041,AUTH-01,2026-10-17T08:50:57Z,authentication,build-agent,WS-FIN-08,login_success,finance-app,auth.log:bg-037,,,
+GH-E0042,NETWORK-02,2026-10-17T09:01:41Z,network,svc-backup,WS-FIN-08,network_connection,telemetry,proxy.csv:bg-076,32768,203.0.113.18:443,approved service
+GH-E0043,NETWORK-02,2026-10-17T09:03:29Z,network,mrivera,WS-FIN-08,network_upload,archive.zip,proxy.csv:bg-006,2048,192.0.2.10:443,routine
+GH-E0044,NETWORK-02,2026-10-17T09:03:50Z,network,analyst.kpatel,WS-FIN-08,network_connection,updates.vendor.test,proxy.csv:bg-062,2048,198.51.100.24:443,routine
+GH-E0045,NETWORK-01,2026-10-17T09:03:51Z,network,analyst.kpatel,WS-OPS-03,network_connection,archive.zip,proxy.csv:bg-073,32768,198.51.100.24:443,routine
+GH-E0046,NETWORK-02,2026-10-17T09:04:35Z,network,analyst.kpatel,BUILD-01,network_upload,api.internal,proxy.csv:bg-058,2048,10.20.0.12:445,unknown
+GH-E0047,NETWORK-01,2026-10-17T09:11:58Z,network,svc-backup,BUILD-01,network_connection,api.internal,proxy.csv:bg-045,512,198.51.100.24:443,unknown
+GH-E0048,NETWORK-01,2026-10-17T09:14:41Z,network,mrivera,SRV-FS-02,network_connection,updates.vendor.test,proxy.csv:bg-059,1048576,10.20.0.12:445,unknown
+GH-E0049,AUTH-01,2026-10-17T09:16:24Z,authentication,build-agent,WS-FIN-08,login_success,sso,auth.log:bg-060,,,
+GH-E0050,AUTH-01,2026-10-17T09:16:26Z,authentication,build-agent,SRV-FS-02,login_success,sso,auth.log:bg-013,,,
+GH-E0051,AUTH-01,2026-10-17T09:18:23Z,authentication,svc-backup,SRV-FS-02,logout,finance-app,auth.log:bg-049,,,
+GH-E0052,ENDPOINT-02,2026-10-17T09:23:11Z,file_activity,analyst.kpatel,WS-OPS-03,file_modified,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-024,,,
+GH-E0053,ENDPOINT-02,2026-10-17T09:24:44Z,file_activity,analyst.kpatel,SRV-FS-02,file_opened,C:/Projects/build.log,endpoint.jsonl:bg-014,,,
+GH-E0054,ENDPOINT-01,2026-10-17T09:25:30Z,file_activity,build-agent,WS-FIN-08,file_deleted,C:/Users/shared/readme.txt,endpoint.jsonl:bg-057,,,
+GH-E0055,AUTH-01,2026-10-17T09:31:03Z,authentication,jlee,BUILD-01,login_failure,finance-app,auth.log:bg-064,,,
+GH-E0056,NETWORK-02,2026-10-17T09:32:24Z,network,jlee,WS-FIN-07,dns_query,updates.vendor.test,proxy.csv:bg-066,32768,192.0.2.10:443,approved service
+GH-E0057,ENDPOINT-02,2026-10-17T09:34:23Z,file_activity,analyst.kpatel,WS-FIN-08,file_opened,C:/Users/shared/readme.txt,endpoint.jsonl:bg-064,,,
+GH-E0058,ENDPOINT-01,2026-10-17T09:36:54Z,file_activity,mrivera,WS-FIN-07,file_opened,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-075,,,
+GH-E0059,ENDPOINT-02,2026-10-17T09:37:43Z,file_activity,analyst.kpatel,WS-OPS-03,file_opened,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-046,,,
+GH-E0060,AUTH-01,2026-10-17T10:00:00Z,authentication,jlee,WS-FIN-07,login_failure,vpn,auth.log:0041,,,
+GH-E0061,AUTH-01,2026-10-17T10:01:00Z,authentication,jlee,WS-FIN-07,login_failure,vpn,auth.log:0042,,,
+GH-E0062,AUTH-01,2026-10-17T10:02:00Z,authentication,jlee,WS-FIN-07,login_failure,vpn,auth.log:0043,,,
+GH-E0063,AUTH-01,2026-10-17T10:04:00Z,authentication,jlee,WS-FIN-07,login_success,vpn,auth.log:0044,,,
+GH-E0064,ENDPOINT-01,2026-10-17T10:07:00Z,file_activity,jlee,WS-FIN-07,file_opened,C:/Finance/Q4-forecast.xlsx,endpoint.jsonl:0188,,,
+GH-E0065,ENDPOINT-01,2026-10-17T10:10:00Z,file_activity,jlee,WS-FIN-07,file_copied,C:/Finance/Q4-forecast.xlsx,endpoint.jsonl:0191,,,to staging
+GH-E0066,ENDPOINT-01,2026-10-17T10:15:00Z,file_activity,jlee,WS-FIN-07,archive_created,C:/Users/jlee/AppData/Local/Temp/q4-review.zip,endpoint.jsonl:0196,,,
+GH-E0067,NETWORK-01,2026-10-17T10:22:00Z,network,jlee,WS-FIN-07,network_upload,q4-review.zip,proxy.csv:0077,18432000,198.51.100.24:443,new destination
+GH-E0068,AUTH-02,2026-10-17T13:00:00Z,authentication,svc-backup,SRV-FS-02,login_success,scheduled task,auth.log:0811,,,
+GH-E0069,ENDPOINT-02,2026-10-17T13:04:00Z,file_activity,svc-backup,SRV-FS-02,archive_created,D:/Backup/nightly-2026-10-17.zip,endpoint.jsonl:0612,,,scheduled backup
+GH-E0070,NETWORK-02,2026-10-17T13:10:00Z,network,svc-backup,SRV-FS-02,network_upload,nightly-2026-10-17.zip,proxy.csv:0212,442368000,203.0.113.18:443,approved backup endpoint
+GH-E0071,ENDPOINT-02,2026-10-17T14:00:42Z,file_activity,analyst.kpatel,BUILD-01,file_created,C:/Projects/build.log,endpoint.jsonl:bg-040,,,
+GH-E0072,NETWORK-02,2026-10-17T14:00:48Z,network,analyst.kpatel,SRV-FS-02,network_connection,archive.zip,proxy.csv:bg-016,32768,192.0.2.10:443,approved service
+GH-E0073,AUTH-01,2026-10-17T14:03:03Z,authentication,build-agent,WS-OPS-03,login_success,vpn,auth.log:bg-042,,,
+GH-E0074,ENDPOINT-01,2026-10-17T14:05:49Z,file_activity,mrivera,SRV-FS-02,file_created,C:/Users/shared/readme.txt,endpoint.jsonl:bg-035,,,
+GH-E0075,NETWORK-01,2026-10-17T14:09:33Z,network,jlee,SRV-FS-02,dns_query,api.internal,proxy.csv:bg-001,512,10.20.0.12:445,approved service
+GH-E0076,ENDPOINT-01,2026-10-17T14:10:56Z,file_activity,build-agent,WS-FIN-08,file_modified,C:/Projects/build.log,endpoint.jsonl:bg-069,,,
+GH-E0077,AUTH-01,2026-10-17T14:11:17Z,authentication,jlee,WS-FIN-07,login_success,vpn,auth.log:bg-039,,,
+GH-E0078,AUTH-01,2026-10-17T14:12:23Z,authentication,build-agent,WS-FIN-07,logout,vpn,auth.log:bg-056,,,
+GH-E0079,NETWORK-01,2026-10-17T14:16:21Z,network,jlee,WS-FIN-07,network_connection,telemetry,proxy.csv:bg-037,512,10.20.0.12:445,routine
+GH-E0080,ENDPOINT-01,2026-10-17T14:17:18Z,file_activity,svc-backup,WS-FIN-08,file_modified,C:/Projects/build.log,endpoint.jsonl:bg-067,,,
+GH-E0081,ENDPOINT-02,2026-10-17T14:22:36Z,file_activity,mrivera,BUILD-01,file_created,C:/Projects/build.log,endpoint.jsonl:bg-058,,,
+GH-E0082,NETWORK-01,2026-10-17T14:30:14Z,network,jlee,WS-FIN-08,network_upload,telemetry,proxy.csv:bg-043,1048576,198.51.100.24:443,approved service
+GH-E0083,ENDPOINT-01,2026-10-17T14:32:08Z,file_activity,svc-backup,WS-OPS-03,file_modified,C:/Users/shared/readme.txt,endpoint.jsonl:bg-007,,,
+GH-E0084,ENDPOINT-02,2026-10-17T14:43:09Z,file_activity,mrivera,WS-OPS-03,file_created,C:/Projects/build.log,endpoint.jsonl:bg-004,,,
+GH-E0085,NETWORK-02,2026-10-17T14:47:08Z,network,jlee,WS-FIN-08,network_connection,archive.zip,proxy.csv:bg-056,1048576,203.0.113.18:443,routine
+GH-E0086,ENDPOINT-01,2026-10-17T14:51:00Z,file_activity,analyst.kpatel,SRV-FS-02,file_deleted,C:/Users/shared/readme.txt,endpoint.jsonl:bg-029,,,
+GH-E0087,AUTH-01,2026-10-17T14:53:09Z,authentication,build-agent,WS-FIN-08,login_success,finance-app,auth.log:bg-044,,,
+GH-E0088,NETWORK-02,2026-10-17T14:53:32Z,network,svc-backup,SRV-FS-02,dns_query,updates.vendor.test,proxy.csv:bg-020,2048,198.51.100.24:443,unknown
+GH-E0089,ENDPOINT-01,2026-10-17T14:54:29Z,file_activity,svc-backup,WS-OPS-03,file_created,D:/Backup/index.db,endpoint.jsonl:bg-039,,,
+GH-E0090,AUTH-01,2026-10-17T15:01:04Z,authentication,jlee,BUILD-01,login_success,vpn,auth.log:bg-040,,,
+GH-E0091,NETWORK-01,2026-10-17T15:03:37Z,network,mrivera,WS-OPS-03,dns_query,telemetry,proxy.csv:bg-057,1048576,10.20.0.12:445,routine
+GH-E0092,ENDPOINT-01,2026-10-17T15:04:03Z,file_activity,analyst.kpatel,SRV-FS-02,file_opened,D:/Backup/index.db,endpoint.jsonl:bg-031,,,
+GH-E0093,NETWORK-01,2026-10-17T15:04:25Z,network,build-agent,WS-FIN-08,network_upload,telemetry,proxy.csv:bg-075,2048,203.0.113.18:443,routine
+GH-E0094,ENDPOINT-01,2026-10-17T15:08:34Z,file_activity,svc-backup,SRV-FS-02,file_opened,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-009,,,
+GH-E0095,NETWORK-01,2026-10-17T15:17:36Z,network,jlee,WS-FIN-07,network_connection,archive.zip,proxy.csv:bg-039,1048576,10.20.0.12:445,approved service
+GH-E0096,ENDPOINT-02,2026-10-17T15:17:56Z,file_activity,build-agent,BUILD-01,file_modified,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-030,,,
+GH-E0097,NETWORK-02,2026-10-17T15:21:23Z,network,svc-backup,BUILD-01,network_connection,updates.vendor.test,proxy.csv:bg-014,32768,203.0.113.18:443,unknown
+GH-E0098,ENDPOINT-01,2026-10-17T15:24:25Z,file_activity,build-agent,WS-OPS-03,file_created,D:/Backup/index.db,endpoint.jsonl:bg-021,,,
+GH-E0099,AUTH-01,2026-10-17T15:31:07Z,authentication,mrivera,WS-FIN-07,login_failure,finance-app,auth.log:bg-066,,,
+GH-E0100,AUTH-01,2026-10-17T15:33:16Z,authentication,jlee,WS-FIN-07,login_success,vpn,auth.log:bg-058,,,
+GH-E0101,AUTH-01,2026-10-17T15:33:55Z,authentication,jlee,SRV-FS-02,login_success,finance-app,auth.log:bg-031,,,
+GH-E0102,ENDPOINT-02,2026-10-17T15:43:21Z,file_activity,jlee,BUILD-01,file_modified,C:/Projects/build.log,endpoint.jsonl:bg-056,,,
+GH-E0103,ENDPOINT-01,2026-10-17T15:47:20Z,file_activity,build-agent,BUILD-01,file_modified,D:/Backup/index.db,endpoint.jsonl:bg-033,,,
+GH-E0104,ENDPOINT-02,2026-10-17T15:47:55Z,file_activity,jlee,WS-FIN-08,file_modified,D:/Backup/index.db,endpoint.jsonl:bg-008,,,
+GH-E0105,AUTH-01,2026-10-17T15:49:26Z,authentication,build-agent,WS-FIN-07,login_failure,finance-app,auth.log:bg-019,,,
+GH-E0106,ENDPOINT-01,2026-10-17T15:49:47Z,file_activity,build-agent,BUILD-01,file_opened,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-049,,,
+GH-E0107,NETWORK-02,2026-10-17T15:50:57Z,network,build-agent,WS-FIN-07,dns_query,api.internal,proxy.csv:bg-046,512,192.0.2.10:443,approved service
+GH-E0108,NETWORK-02,2026-10-17T15:53:59Z,network,analyst.kpatel,SRV-FS-02,network_upload,telemetry,proxy.csv:bg-022,32768,203.0.113.18:443,unknown
+GH-E0109,NETWORK-01,2026-10-17T15:57:35Z,network,jlee,WS-FIN-08,network_upload,archive.zip,proxy.csv:bg-051,1048576,10.20.0.12:445,unknown
+GH-E0110,AUTH-01,2026-10-17T15:59:39Z,authentication,analyst.kpatel,WS-FIN-08,login_success,finance-app,auth.log:bg-003,,,
+GH-E0111,AUTH-01,2026-10-17T16:01:23Z,authentication,analyst.kpatel,WS-OPS-03,login_success,finance-app,auth.log:bg-014,,,
+GH-E0112,AUTH-01,2026-10-17T16:02:32Z,authentication,jlee,BUILD-01,login_success,sso,auth.log:bg-075,,,
+GH-E0113,AUTH-01,2026-10-17T16:02:58Z,authentication,mrivera,WS-OPS-03,login_success,sso,auth.log:bg-034,,,
+GH-E0114,AUTH-01,2026-10-17T16:04:49Z,authentication,build-agent,WS-FIN-08,login_success,sso,auth.log:bg-052,,,
+GH-E0115,AUTH-01,2026-10-17T16:06:02Z,authentication,mrivera,WS-FIN-08,login_success,sso,auth.log:bg-004,,,
+GH-E0116,ENDPOINT-02,2026-10-17T16:13:56Z,file_activity,analyst.kpatel,SRV-FS-02,file_modified,C:/Users/shared/readme.txt,endpoint.jsonl:bg-062,,,
+GH-E0117,ENDPOINT-02,2026-10-17T16:14:30Z,file_activity,build-agent,BUILD-01,file_opened,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-054,,,
+GH-E0118,AUTH-01,2026-10-17T16:19:41Z,authentication,analyst.kpatel,SRV-FS-02,login_failure,vpn,auth.log:bg-015,,,
+GH-E0119,ENDPOINT-02,2026-10-17T16:23:03Z,file_activity,build-agent,WS-FIN-08,file_deleted,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-018,,,
+GH-E0120,NETWORK-02,2026-10-17T16:35:21Z,network,mrivera,SRV-FS-02,dns_query,updates.vendor.test,proxy.csv:bg-026,32768,198.51.100.24:443,unknown
+GH-E0121,ENDPOINT-02,2026-10-17T16:36:52Z,file_activity,svc-backup,WS-OPS-03,file_deleted,C:/Users/shared/readme.txt,endpoint.jsonl:bg-048,,,
+GH-E0122,AUTH-01,2026-10-17T16:40:43Z,authentication,mrivera,WS-FIN-07,login_success,vpn,auth.log:bg-048,,,
+GH-E0123,NETWORK-02,2026-10-17T16:40:45Z,network,analyst.kpatel,BUILD-01,network_connection,api.internal,proxy.csv:bg-074,2048,203.0.113.18:443,unknown
+GH-E0124,ENDPOINT-01,2026-10-17T16:41:09Z,file_activity,jlee,WS-FIN-08,file_deleted,D:/Backup/index.db,endpoint.jsonl:bg-047,,,
+GH-E0125,ENDPOINT-01,2026-10-17T16:46:20Z,file_activity,analyst.kpatel,BUILD-01,file_modified,C:/Projects/build.log,endpoint.jsonl:bg-027,,,
+GH-E0126,AUTH-01,2026-10-17T16:47:55Z,authentication,mrivera,WS-FIN-08,login_success,vpn,auth.log:bg-061,,,
+GH-E0127,AUTH-01,2026-10-17T16:50:49Z,authentication,svc-backup,WS-OPS-03,login_success,vpn,auth.log:bg-024,,,
+GH-E0128,NETWORK-01,2026-10-17T16:51:09Z,network,svc-backup,WS-FIN-08,network_connection,api.internal,proxy.csv:bg-055,512,203.0.113.18:443,unknown
+GH-E0129,ENDPOINT-02,2026-10-17T16:51:33Z,file_activity,svc-backup,WS-FIN-07,file_deleted,C:/Users/shared/readme.txt,endpoint.jsonl:bg-020,,,
+GH-E0130,NETWORK-02,2026-10-17T16:52:44Z,network,mrivera,WS-OPS-03,dns_query,api.internal,proxy.csv:bg-070,2048,203.0.113.18:443,unknown
+GH-E0131,AUTH-01,2026-10-17T16:58:21Z,authentication,build-agent,WS-FIN-08,login_success,finance-app,auth.log:bg-057,,,
+GH-E0132,ENDPOINT-01,2026-10-17T17:01:19Z,file_activity,mrivera,SRV-FS-02,file_opened,C:/Users/shared/readme.txt,endpoint.jsonl:bg-019,,,
+GH-E0133,AUTH-01,2026-10-17T17:04:34Z,authentication,analyst.kpatel,BUILD-01,login_failure,finance-app,auth.log:bg-010,,,
+GH-E0134,NETWORK-02,2026-10-17T17:08:57Z,network,svc-backup,SRV-FS-02,network_upload,updates.vendor.test,proxy.csv:bg-036,32768,203.0.113.18:443,approved service
+GH-E0135,AUTH-01,2026-10-17T17:09:21Z,authentication,analyst.kpatel,WS-FIN-07,login_success,finance-app,auth.log:bg-033,,,
+GH-E0136,AUTH-01,2026-10-17T17:09:59Z,authentication,svc-backup,WS-FIN-07,login_success,finance-app,auth.log:bg-028,,,
+GH-E0137,ENDPOINT-01,2026-10-17T17:10:36Z,file_activity,jlee,WS-FIN-07,file_deleted,C:/Users/shared/readme.txt,endpoint.jsonl:bg-055,,,
+GH-E0138,NETWORK-02,2026-10-17T17:12:02Z,network,svc-backup,WS-OPS-03,network_connection,telemetry,proxy.csv:bg-012,512,203.0.113.18:443,approved service
+GH-E0139,ENDPOINT-01,2026-10-17T17:12:32Z,file_activity,mrivera,SRV-FS-02,file_opened,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-037,,,
+GH-E0140,NETWORK-02,2026-10-17T17:13:29Z,network,mrivera,WS-FIN-07,network_upload,archive.zip,proxy.csv:bg-002,2048,198.51.100.24:443,routine
+GH-E0141,AUTH-01,2026-10-17T17:13:55Z,authentication,svc-backup,WS-FIN-08,mfa_challenge,vpn,auth.log:bg-022,,,
+GH-E0142,NETWORK-01,2026-10-17T17:16:12Z,network,mrivera,WS-FIN-08,network_upload,telemetry,proxy.csv:bg-019,32768,10.20.0.12:445,routine
+GH-E0143,NETWORK-01,2026-10-17T17:19:30Z,network,mrivera,WS-FIN-08,dns_query,api.internal,proxy.csv:bg-023,32768,198.51.100.24:443,routine
+GH-E0144,AUTH-01,2026-10-17T17:19:31Z,authentication,jlee,BUILD-01,mfa_challenge,finance-app,auth.log:bg-012,,,
+GH-E0145,AUTH-01,2026-10-17T17:19:59Z,authentication,analyst.kpatel,SRV-FS-02,login_success,sso,auth.log:bg-059,,,
+GH-E0146,AUTH-01,2026-10-17T17:32:43Z,authentication,analyst.kpatel,WS-FIN-08,login_success,finance-app,auth.log:bg-016,,,
+GH-E0147,ENDPOINT-01,2026-10-17T17:37:17Z,file_activity,jlee,WS-FIN-07,file_modified,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-011,,,
+GH-E0148,AUTH-01,2026-10-17T17:37:46Z,authentication,svc-backup,WS-FIN-07,login_success,sso,auth.log:bg-063,,,
+GH-E0149,ENDPOINT-01,2026-10-17T17:39:32Z,file_activity,analyst.kpatel,WS-FIN-08,file_modified,C:/Projects/build.log,endpoint.jsonl:bg-003,,,
+GH-E0150,AUTH-01,2026-10-17T17:41:16Z,authentication,analyst.kpatel,WS-FIN-08,login_success,sso,auth.log:bg-026,,,
+GH-E0151,ENDPOINT-01,2026-10-17T17:50:48Z,file_activity,build-agent,SRV-FS-02,file_modified,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-077,,,
+GH-E0152,AUTH-01,2026-10-17T17:57:59Z,authentication,build-agent,WS-FIN-07,login_success,vpn,auth.log:bg-002,,,
+GH-E0153,NETWORK-01,2026-10-17T18:01:57Z,network,svc-backup,SRV-FS-02,dns_query,updates.vendor.test,proxy.csv:bg-027,2048,203.0.113.18:443,routine
+GH-E0154,ENDPOINT-02,2026-10-17T18:02:10Z,file_activity,svc-backup,BUILD-01,file_opened,C:/Users/shared/readme.txt,endpoint.jsonl:bg-072,,,
+GH-E0155,NETWORK-01,2026-10-17T18:02:49Z,network,build-agent,BUILD-01,network_upload,updates.vendor.test,proxy.csv:bg-031,512,203.0.113.18:443,approved service
+GH-E0156,AUTH-01,2026-10-17T18:05:15Z,authentication,analyst.kpatel,WS-OPS-03,login_success,sso,auth.log:bg-053,,,
+GH-E0157,NETWORK-02,2026-10-17T18:07:20Z,network,build-agent,WS-FIN-07,network_upload,archive.zip,proxy.csv:bg-050,2048,198.51.100.24:443,routine
+GH-E0158,AUTH-01,2026-10-17T18:08:31Z,authentication,analyst.kpatel,SRV-FS-02,logout,vpn,auth.log:bg-045,,,
+GH-E0159,ENDPOINT-01,2026-10-17T18:13:05Z,file_activity,analyst.kpatel,SRV-FS-02,file_modified,C:/Projects/build.log,endpoint.jsonl:bg-053,,,
+GH-E0160,NETWORK-01,2026-10-17T18:15:09Z,network,svc-backup,SRV-FS-02,network_connection,updates.vendor.test,proxy.csv:bg-033,32768,192.0.2.10:443,routine
+GH-E0161,NETWORK-02,2026-10-17T18:23:04Z,network,analyst.kpatel,WS-OPS-03,network_connection,updates.vendor.test,proxy.csv:bg-010,512,198.51.100.24:443,approved service
+GH-E0162,NETWORK-02,2026-10-17T18:25:50Z,network,svc-backup,WS-OPS-03,network_upload,updates.vendor.test,proxy.csv:bg-004,1048576,203.0.113.18:443,unknown
+GH-E0163,ENDPOINT-01,2026-10-17T18:27:22Z,file_activity,jlee,BUILD-01,file_created,C:/Projects/build.log,endpoint.jsonl:bg-041,,,
+GH-E0164,NETWORK-02,2026-10-17T18:30:19Z,network,svc-backup,WS-OPS-03,dns_query,telemetry,proxy.csv:bg-024,512,10.20.0.12:445,routine
+GH-E0165,ENDPOINT-02,2026-10-17T18:31:44Z,file_activity,analyst.kpatel,BUILD-01,file_opened,D:/Backup/index.db,endpoint.jsonl:bg-010,,,
+GH-E0166,NETWORK-01,2026-10-17T18:32:30Z,network,jlee,BUILD-01,dns_query,api.internal,proxy.csv:bg-047,32768,10.20.0.12:445,unknown
+GH-E0167,AUTH-01,2026-10-17T18:35:36Z,authentication,svc-backup,SRV-FS-02,login_success,finance-app,auth.log:bg-035,,,
+GH-E0168,AUTH-01,2026-10-17T18:43:02Z,authentication,mrivera,SRV-FS-02,login_success,sso,auth.log:bg-054,,,
+GH-E0169,NETWORK-02,2026-10-17T18:45:07Z,network,build-agent,WS-FIN-08,dns_query,api.internal,proxy.csv:bg-060,2048,192.0.2.10:443,unknown
+GH-E0170,NETWORK-02,2026-10-17T18:45:27Z,network,jlee,BUILD-01,network_connection,updates.vendor.test,proxy.csv:bg-028,2048,192.0.2.10:443,routine
+GH-E0171,NETWORK-02,2026-10-17T18:48:52Z,network,analyst.kpatel,WS-OPS-03,network_upload,telemetry,proxy.csv:bg-044,1048576,203.0.113.18:443,routine
+GH-E0172,ENDPOINT-02,2026-10-17T18:49:48Z,file_activity,analyst.kpatel,SRV-FS-02,file_opened,C:/Projects/build.log,endpoint.jsonl:bg-002,,,
+GH-E0173,NETWORK-01,2026-10-17T18:54:07Z,network,mrivera,WS-FIN-08,network_connection,api.internal,proxy.csv:bg-053,1048576,198.51.100.24:443,approved service
+GH-E0174,AUTH-01,2026-10-17T18:54:37Z,authentication,analyst.kpatel,WS-FIN-07,login_success,vpn,auth.log:bg-055,,,
+GH-E0175,AUTH-01,2026-10-17T18:57:25Z,authentication,svc-backup,WS-FIN-08,login_success,sso,auth.log:bg-046,,,
+GH-E0176,AUTH-01,2026-10-17T19:01:01Z,authentication,build-agent,SRV-FS-02,mfa_challenge,finance-app,auth.log:bg-017,,,
+GH-E0177,ENDPOINT-01,2026-10-17T19:01:44Z,file_activity,jlee,WS-FIN-08,file_modified,D:/Backup/index.db,endpoint.jsonl:bg-063,,,
+GH-E0178,AUTH-01,2026-10-17T19:05:03Z,authentication,svc-backup,WS-FIN-08,login_success,vpn,auth.log:bg-009,,,
+GH-E0179,AUTH-01,2026-10-17T19:08:18Z,authentication,svc-backup,WS-OPS-03,login_success,finance-app,auth.log:bg-027,,,
+GH-E0180,ENDPOINT-01,2026-10-17T19:12:37Z,file_activity,mrivera,BUILD-01,file_deleted,D:/Backup/index.db,endpoint.jsonl:bg-015,,,
+GH-E0181,NETWORK-01,2026-10-17T19:12:55Z,network,build-agent,WS-FIN-07,dns_query,updates.vendor.test,proxy.csv:bg-007,2048,203.0.113.18:443,routine
+GH-E0182,NETWORK-01,2026-10-17T19:13:20Z,network,mrivera,BUILD-01,dns_query,api.internal,proxy.csv:bg-035,512,198.51.100.24:443,approved service
+GH-E0183,NETWORK-02,2026-10-17T19:23:29Z,network,mrivera,SRV-FS-02,dns_query,telemetry,proxy.csv:bg-042,512,10.20.0.12:445,routine
+GH-E0184,ENDPOINT-01,2026-10-17T19:29:57Z,file_activity,mrivera,BUILD-01,file_opened,D:/Backup/index.db,endpoint.jsonl:bg-013,,,
+GH-E0185,NETWORK-01,2026-10-17T19:30:07Z,network,build-agent,WS-OPS-03,dns_query,telemetry,proxy.csv:bg-003,2048,192.0.2.10:443,approved service
+GH-E0186,NETWORK-02,2026-10-17T19:30:17Z,network,build-agent,WS-OPS-03,network_upload,updates.vendor.test,proxy.csv:bg-040,512,192.0.2.10:443,routine
+GH-E0187,NETWORK-01,2026-10-17T19:31:28Z,network,mrivera,SRV-FS-02,network_upload,archive.zip,proxy.csv:bg-029,1048576,10.20.0.12:445,unknown
+GH-E0188,NETWORK-02,2026-10-17T19:31:50Z,network,jlee,WS-FIN-08,network_upload,archive.zip,proxy.csv:bg-072,32768,198.51.100.24:443,approved service
+GH-E0189,ENDPOINT-01,2026-10-17T19:35:32Z,file_activity,analyst.kpatel,WS-OPS-03,file_created,C:/Users/shared/readme.txt,endpoint.jsonl:bg-045,,,
+GH-E0190,ENDPOINT-02,2026-10-17T19:41:05Z,file_activity,svc-backup,SRV-FS-02,file_modified,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-022,,,
+GH-E0191,ENDPOINT-01,2026-10-17T19:42:38Z,file_activity,mrivera,WS-FIN-08,file_modified,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-073,,,
+GH-E0192,ENDPOINT-01,2026-10-17T19:47:49Z,file_activity,svc-backup,SRV-FS-02,file_opened,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-001,,,
+GH-E0193,ENDPOINT-02,2026-10-17T19:48:20Z,file_activity,jlee,WS-FIN-08,file_created,C:/Projects/build.log,endpoint.jsonl:bg-074,,,
+GH-E0194,NETWORK-01,2026-10-17T19:48:21Z,network,mrivera,SRV-FS-02,dns_query,telemetry,proxy.csv:bg-017,32768,10.20.0.12:445,unknown
+GH-E0195,ENDPOINT-01,2026-10-17T19:49:32Z,file_activity,jlee,WS-FIN-08,file_modified,D:/Backup/index.db,endpoint.jsonl:bg-017,,,
+GH-E0196,ENDPOINT-02,2026-10-17T19:51:21Z,file_activity,analyst.kpatel,BUILD-01,file_deleted,C:/Users/shared/readme.txt,endpoint.jsonl:bg-042,,,
+GH-E0197,NETWORK-02,2026-10-17T19:53:17Z,network,build-agent,WS-FIN-07,dns_query,archive.zip,proxy.csv:bg-054,1048576,192.0.2.10:443,approved service
+GH-E0198,ENDPOINT-02,2026-10-17T19:54:28Z,file_activity,svc-backup,WS-FIN-07,file_deleted,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-050,,,
+GH-E0199,ENDPOINT-02,2026-10-17T19:58:51Z,file_activity,svc-backup,WS-OPS-03,file_created,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-026,,,
+GH-E0200,ENDPOINT-02,2026-10-17T19:59:11Z,file_activity,mrivera,WS-FIN-07,file_opened,C:/Users/shared/readme.txt,endpoint.jsonl:bg-032,,,
+GH-E0201,ENDPOINT-01,2026-10-17T20:01:12Z,file_activity,analyst.kpatel,WS-OPS-03,file_modified,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-059,,,
+GH-E0202,NETWORK-01,2026-10-17T20:01:25Z,network,analyst.kpatel,WS-FIN-07,dns_query,updates.vendor.test,proxy.csv:bg-009,1048576,203.0.113.18:443,approved service
+GH-E0203,NETWORK-01,2026-10-17T20:19:43Z,network,mrivera,BUILD-01,network_connection,api.internal,proxy.csv:bg-015,512,203.0.113.18:443,approved service
+GH-E0204,ENDPOINT-01,2026-10-17T20:24:50Z,file_activity,build-agent,SRV-FS-02,file_opened,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-043,,,
+GH-E0205,NETWORK-01,2026-10-17T20:25:12Z,network,jlee,WS-FIN-07,dns_query,api.internal,proxy.csv:bg-021,32768,192.0.2.10:443,approved service
+GH-E0206,ENDPOINT-01,2026-10-17T20:25:26Z,file_activity,build-agent,WS-FIN-07,file_opened,C:/Projects/build.log,endpoint.jsonl:bg-071,,,
+GH-E0207,AUTH-01,2026-10-17T20:29:16Z,authentication,analyst.kpatel,SRV-FS-02,login_success,finance-app,auth.log:bg-021,,,
+GH-E0208,AUTH-01,2026-10-17T20:32:32Z,authentication,jlee,SRV-FS-02,login_failure,finance-app,auth.log:bg-001,,,
+GH-E0209,ENDPOINT-01,2026-10-17T20:33:10Z,file_activity,analyst.kpatel,BUILD-01,file_deleted,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-051,,,
+GH-E0210,NETWORK-01,2026-10-17T20:37:27Z,network,mrivera,WS-OPS-03,network_connection,api.internal,proxy.csv:bg-065,1048576,203.0.113.18:443,approved service
+GH-E0211,AUTH-01,2026-10-17T20:40:42Z,authentication,analyst.kpatel,WS-FIN-08,login_failure,finance-app,auth.log:bg-023,,,
+GH-E0212,NETWORK-02,2026-10-17T20:41:29Z,network,svc-backup,BUILD-01,network_upload,api.internal,proxy.csv:bg-068,1048576,192.0.2.10:443,approved service
+GH-E0213,NETWORK-01,2026-10-17T20:43:47Z,network,jlee,SRV-FS-02,network_connection,updates.vendor.test,proxy.csv:bg-063,2048,203.0.113.18:443,routine
+GH-E0214,AUTH-01,2026-10-17T20:44:30Z,authentication,build-agent,SRV-FS-02,logout,finance-app,auth.log:bg-030,,,
+GH-E0215,AUTH-01,2026-10-17T20:44:32Z,authentication,analyst.kpatel,WS-FIN-07,login_failure,finance-app,auth.log:bg-074,,,
+GH-E0216,AUTH-01,2026-10-17T20:45:12Z,authentication,jlee,BUILD-01,login_success,sso,auth.log:bg-072,,,
+GH-E0217,NETWORK-01,2026-10-17T20:52:15Z,network,svc-backup,WS-FIN-07,dns_query,updates.vendor.test,proxy.csv:bg-071,2048,10.20.0.12:445,routine
+GH-E0218,NETWORK-02,2026-10-17T20:52:50Z,network,build-agent,BUILD-01,dns_query,telemetry,proxy.csv:bg-048,512,192.0.2.10:443,unknown
+GH-E0219,AUTH-01,2026-10-17T20:54:30Z,authentication,svc-backup,BUILD-01,login_success,vpn,auth.log:bg-069,,,
+GH-E0220,AUTH-01,2026-10-17T20:54:34Z,authentication,mrivera,WS-FIN-07,login_failure,finance-app,auth.log:bg-011,,,
+GH-E0221,ENDPOINT-02,2026-10-17T20:58:33Z,file_activity,jlee,WS-OPS-03,file_deleted,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-006,,,
+GH-E0222,AUTH-01,2026-10-17T20:59:10Z,authentication,mrivera,WS-FIN-07,login_failure,finance-app,auth.log:bg-043,,,
+GH-E0223,ENDPOINT-02,2026-10-17T21:01:13Z,file_activity,analyst.kpatel,BUILD-01,file_opened,C:/Users/shared/readme.txt,endpoint.jsonl:bg-068,,,
+GH-E0224,ENDPOINT-02,2026-10-17T21:01:50Z,file_activity,jlee,SRV-FS-02,file_created,C:/Projects/build.log,endpoint.jsonl:bg-012,,,
+GH-E0225,NETWORK-01,2026-10-17T21:02:10Z,network,analyst.kpatel,WS-FIN-07,network_upload,telemetry,proxy.csv:bg-025,1048576,10.20.0.12:445,routine
+GH-E0226,ENDPOINT-01,2026-10-17T21:02:23Z,file_activity,build-agent,WS-OPS-03,file_opened,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-005,,,
+GH-E0227,AUTH-01,2026-10-17T21:05:19Z,authentication,jlee,WS-FIN-08,login_success,finance-app,auth.log:bg-025,,,
+GH-E0228,ENDPOINT-01,2026-10-17T21:09:56Z,file_activity,mrivera,SRV-FS-02,file_opened,C:/Finance/monthly.xlsx,endpoint.jsonl:bg-025,,,
+GH-E0229,ENDPOINT-02,2026-10-17T21:10:50Z,file_activity,mrivera,SRV-FS-02,file_created,C:/Projects/build.log,endpoint.jsonl:bg-078,,,
+GH-E0230,NETWORK-01,2026-10-17T21:11:28Z,network,svc-backup,SRV-FS-02,network_connection,updates.vendor.test,proxy.csv:bg-013,32768,203.0.113.18:443,approved service
+GH-E0231,NETWORK-01,2026-10-17T21:17:57Z,network,mrivera,WS-FIN-08,network_upload,telemetry,proxy.csv:bg-067,2048,198.51.100.24:443,unknown
+GH-E0232,AUTH-01,2026-10-17T21:18:07Z,authentication,analyst.kpatel,WS-OPS-03,login_success,vpn,auth.log:bg-070,,,
+GH-E0233,ENDPOINT-02,2026-10-17T21:21:33Z,file_activity,analyst.kpatel,BUILD-01,file_deleted,C:/Projects/build.log,endpoint.jsonl:bg-070,,,
+GH-E0234,NETWORK-02,2026-10-17T21:24:51Z,network,build-agent,BUILD-01,dns_query,api.internal,proxy.csv:bg-038,512,203.0.113.18:443,routine
+GH-E0235,AUTH-01,2026-10-17T21:28:11Z,authentication,jlee,BUILD-01,login_success,finance-app,auth.log:bg-018,,,
+GH-E0236,AUTH-01,2026-10-17T21:32:52Z,authentication,mrivera,SRV-FS-02,login_success,sso,auth.log:bg-067,,,
+GH-E0237,AUTH-01,2026-10-17T21:37:22Z,authentication,jlee,BUILD-01,login_success,vpn,auth.log:bg-006,,,
+GH-E0238,AUTH-01,2026-10-17T21:38:14Z,authentication,mrivera,SRV-FS-02,mfa_challenge,vpn,auth.log:bg-051,,,
+GH-E0239,NETWORK-01,2026-10-17T21:38:44Z,network,build-agent,WS-FIN-07,network_upload,updates.vendor.test,proxy.csv:bg-041,2048,10.20.0.12:445,routine
+GH-E0240,AUTH-01,2026-10-17T21:50:20Z,authentication,build-agent,WS-OPS-03,login_success,vpn,auth.log:bg-005,,,

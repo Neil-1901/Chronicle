@@ -71,6 +71,10 @@ class TestEngine(unittest.TestCase):
 
             saved = json.loads(output.read_text(encoding="utf-8"))
             self.assertEqual(saved["case_id"], "CASE-TEST-001")
+            self.assertEqual(report["pipeline"][-1]["stage_id"], "validation")
+            self.assertTrue(report["pipeline"][-1]["output"]["checks"]["finding_event_references_resolve"])
+            self.assertTrue(report["pipeline"][-1]["output"]["saved_report_readback"])
+            self.assertEqual(saved["pipeline"][-1]["stage_id"], "validation")
 
     def test_missing_evidence_directory_is_rejected(self):
         with tempfile.TemporaryDirectory() as directory:

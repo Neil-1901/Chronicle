@@ -1,0 +1,18 @@
+{
+  "case_id": "OPERATION-GLASSHOUSE",
+  "label": "Synthetic evaluation metadata; never a Chronicle finding",
+  "seed": 1901,
+  "known_sequence_event_ids": [
+    "GH-E0060",
+    "GH-E0061",
+    "GH-E0062",
+    "GH-E0063",
+    "GH-E0066",
+    "GH-E0067"
+  ],
+  "benign_sequence_event_ids": [
+    "GH-E0069",
+    "GH-E0070"
+  ],
+  "notes": "The label describes generator intent for evaluation. It does not establish human identity, authorization, exfiltration, or a real incident."
+}

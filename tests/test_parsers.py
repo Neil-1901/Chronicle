@@ -67,6 +67,27 @@ class TestParsers(unittest.TestCase):
             self.assertIsNone(events[0]["account_id"])
             self.assertIsNone(events[0]["object_reference"])
 
+    def test_preserves_stable_source_ids_and_extra_observables(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "events.csv"
+            path.write_text(
+                "event_id,source_id,timestamp,source_type,action,source_reference,host,bytes\n"
+                "GH-E0001,NETWORK-01,2026-10-18T10:00:00Z,network,network_upload,proxy:7,WS-1,1024\n",
+                encoding="utf-8",
+            )
+            event = parse_events(path)[0]
+            self.assertEqual(event["event_id"], "GH-E0001")
+            self.assertEqual(event["source_id"], "NETWORK-01")
+            self.assertEqual(event["attributes"], {"host": "WS-1", "bytes": "1024"})
+
+    def test_duplicate_stable_event_ids_are_rejected(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "events.csv"
+            row = "E-1,2026-10-18T10:00:00Z,network,upload,proxy:1\n"
+            path.write_text("event_id,timestamp,source_type,action,source_reference\n" + row + row, encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "must be unique"):
+                parse_events(path)
+
     def test_missing_file_is_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
             with self.assertRaises(FileNotFoundError):

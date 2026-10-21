@@ -1,21 +1,7 @@
-# Chronicle — Project Overview
+# Chronicle project overview
 
-## Problem Statement
-Digital evidence can be scattered across file activity, browser artefacts, system records and network observations. Chronicle aims to organise records, reconstruct an incident timeline, correlate events and generate an investigation report.
+Chronicle is an academic digital-forensics workbench with two separate synthetic investigation cases: the retained six-event `CHRONICLE-DEMO-001` and the 240-event Operation Glasshouse. It calculates file fingerprints, parses and normalizes event records, reconstructs a timeline, runs explainable correlation rules, and generates case-specific reports.
 
-## Objectives
-1. Verify evidence integrity using SHA-256.
-2. Parse and normalise evidence records.
-3. Reconstruct a chronological timeline.
-4. Correlate events using explainable rules.
-5. Link findings to supporting evidence.
-6. Generate an investigation report.
+The project also includes Shreya’s separate public Wireshark practice capture and forensic-tool exhibits. Those materials are acknowledged and documented but are not connected to the synthetic case evidence or analyzed by Chronicle’s backend.
 
-## Scope
-Controlled synthetic evidence; Python analysis engine; React and FastAPI planned for the web application.
-
-## Ethics and Limitations
-Correlation does not prove identity or intent. Hashing alone does not prove authenticity. No unauthorised systems will be accessed.
-
-## Status
-Planning and initial development.
+See the repository [README](../README.md) for setup and [demo script](demo-script.md) for the recording sequence.

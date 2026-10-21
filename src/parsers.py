@@ -49,8 +49,21 @@ def normalize_event(record: dict[str, Any], event_id: str) -> dict[str, Any]:
             f"Event is missing required fields: {', '.join(missing)}"
         )
 
+    known_fields = {
+        "timestamp", "source_type", "action", "source_reference",
+        "event_id", "source_id", "account_id", "object_reference",
+        "attributes",
+    }
+    attributes = dict(record.get("attributes") or {})
+    attributes.update({
+        str(key): value.strip() if isinstance(value, str) else value
+        for key, value in record.items()
+        if key not in known_fields and value not in (None, "")
+    })
+
     return {
-        "event_id": event_id,
+        "event_id": str(record.get("event_id", "")).strip() or event_id,
+        "source_id": str(record.get("source_id", "")).strip() or None,
         "timestamp": normalize_timestamp(str(record["timestamp"])),
         "source_type": str(record["source_type"]).strip().lower(),
         "account_id": str(record.get("account_id", "")).strip() or None,
@@ -59,6 +72,7 @@ def normalize_event(record: dict[str, Any], event_id: str) -> dict[str, Any]:
             str(record.get("object_reference", "")).strip() or None
         ),
         "source_reference": str(record["source_reference"]).strip(),
+        "attributes": attributes,
     }
 
 
@@ -83,7 +97,11 @@ def parse_events(file_path: str | Path) -> list[dict[str, Any]]:
         else:
             raise ValueError(f"Unsupported input format: {path.suffix}")
 
-    return [
+    events = [
         normalize_event(record, f"E{index:04d}")
         for index, record in enumerate(records, start=1)
     ]
+    ids = [event["event_id"] for event in events]
+    if len(ids) != len(set(ids)):
+        raise ValueError("Event IDs must be unique within an evidence input")
+    return events

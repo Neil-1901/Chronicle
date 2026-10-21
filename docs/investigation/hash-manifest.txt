@@ -2,5 +2,7 @@
 Evidence file: evidence/synthetic/incident-note.txt
 Evidence type: Synthetic text fixture
 Hash algorithm: SHA-256
-SHA-256: A98DF737E6D5A42D8E26F26D848E7A1668C05A61C9F1092CE3270706B63FAF16
+SHA-256: D8EECC6620DF803F86A31E189A46D3BAD22D04560D8E92C03E69A6E46E75928C
 Purpose: Initial integrity reference before further analysis
+
+Review note: The originally recorded SHA-256 value A98DF737E6D5A42D8E26F26D848E7A1668C05A61C9F1092CE3270706B63FAF16 did not match the independently calculated value D8EECC6620DF803F86A31E189A46D3BAD22D04560D8E92C03E69A6E46E75928C during review. The evidence file was not modified. The reason for the discrepancy has not been established; the corrected value records the file's hash at review time and does not independently establish its earlier integrity.

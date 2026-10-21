@@ -222,3 +222,8 @@ __marimo__/
 # Chronicle generated investigation outputs
 outputs/*.json
 outputs/*_manifest.csv
+
+# Retained local snapshots from earlier project work; keep them on disk but
+# avoid accidentally including them in the submission.
+*.pre-*
+*.before-redesign
